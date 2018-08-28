@@ -1,0 +1,19 @@
+.banner-div {
+	background: rgba(0, 0, 0, 0.9);
+	margin-bottom: 1.45rem;
+}
+
+.banner-div a {
+	color: #ffa500;
+	text-decoration: none
+}
+
+.banner-div .nav-bar {
+	list-style-type: none;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.banner-div .nav-bar li {
+	padding-right: 10px;
+}

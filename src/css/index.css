@@ -4,9 +4,9 @@
   align-items: flex-start;
   justify-content: center;
   padding: 1.5rem 1.5rem;
-      border: 1px dotted gray;
-    box-shadow: 9px 9px 10px grey;
-    border-radius: 10px;
+  border: 1px dotted gray;
+  box-shadow: 9px 9px 10px grey;
+  border-radius: 10px;
   margin-bottom: 20px;
 }
 
@@ -16,6 +16,10 @@
 
 .blog-post-preview .title, .blog-post-preview .date, .blog-post-preview .link {
   margin: 0 auto;
+}
+
+.blog-post-preview .title {
+  font-size: 2rem;
 }
 
 .blog-post-preview .date {

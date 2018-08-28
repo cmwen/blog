@@ -4,6 +4,7 @@ import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import 'prismjs/themes/prism-coy.css';
 import '../css/typography.css';
+import '../css/layout.css';
 
 export default class Template extends React.Component {
   static propTypes = {
@@ -26,12 +27,7 @@ export default class Template extends React.Component {
         >
           <html lang="en" />
         </Helmet>
-        <div
-          style={{
-            background: `limegreen`,
-            marginBottom: `1.45rem`
-          }}
-        >
+        <div className="banner-div">
           <div
             style={{
               margin: `0 auto`,
@@ -40,16 +36,17 @@ export default class Template extends React.Component {
             }}
           >
             <h1 style={{ margin: 0, fontSize: isRoot ? `2.5rem` : `2rem` }}>
-              <Link
-                to="/"
-                style={{
-                  color: 'white',
-                  textDecoration: 'none'
-                }}
-              >
-                Min's Blog
-              </Link>
+              <Link to="/">Min's Blog</Link>
             </h1>
+
+            <ol className="nav-bar">
+              <li>
+                <Link to="/about">About</Link>
+              </li>
+              <li>
+                <Link to="/about">Profolio</Link>
+              </li>
+            </ol>
           </div>
         </div>
         <div
