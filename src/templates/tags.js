@@ -1,8 +1,6 @@
 import React from 'react';
 import GatsbyLink from 'gatsby-link';
-import HomeIcon from 'react-icons/lib/fa/home';
-import TagsIcon from 'react-icons/lib/fa/tags';
-
+import { FaHome, FaTag } from 'react-icons/fa';
 
 import Layout from '../components/Layout';
 import Link from '../components/Link';
@@ -25,15 +23,13 @@ function Tags({ posts, post, tag }) {
                     {frontmatter.title}
                   </GatsbyLink>
                 </h1>
-                <p>
-                  {excerpt}
-                </p>
+                <p>{excerpt}</p>
               </li>
             );
           })}
         </ul>
         <Link to="/tags">
-          <TagsIcon /> All tags
+          <FaTag /> All tags
         </Link>
       </div>
     );
@@ -42,14 +38,14 @@ function Tags({ posts, post, tag }) {
     <div>
       <h1>Tags</h1>
       <ul className="tags">
-        {Object.keys(posts).map(tagName => <li key={tagName}>
-              <GatsbyLink to={`/tags/${tagName}`}>
-                {tagName}
-              </GatsbyLink>
-            </li>)}
+        {Object.keys(posts).map(tagName => (
+          <li key={tagName}>
+            <GatsbyLink to={`/tags/${tagName}`}>{tagName}</GatsbyLink>
+          </li>
+        ))}
       </ul>
       <Link to="/">
-        <HomeIcon /> All posts
+        <FaHome /> All posts
       </Link>
     </div>
   );
@@ -58,6 +54,8 @@ function Tags({ posts, post, tag }) {
 export default function TagsTemplate(props) {
   const { pageContext } = props;
   return (
-    <Layout {...props}><Tags {...pageContext} /></Layout>
+    <Layout {...props}>
+      <Tags {...pageContext} />
+    </Layout>
   );
 }

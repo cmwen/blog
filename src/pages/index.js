@@ -23,12 +23,8 @@ export default function Index(props) {
                     {post.frontmatter.title}
                   </GatsbyLink>
                 </h1>
-                <h2 className="date">
-                  {post.frontmatter.date}
-                </h2>
-                <p>
-                  {post.excerpt}
-                </p>
+                <h2 className="date">{post.frontmatter.date}</h2>
+                <p>{post.excerpt}</p>
                 <Link to={post.frontmatter.path}>Read more</Link>
               </div>
             );

@@ -39,11 +39,17 @@ module.exports = {
             }
           },
           {
-            resolve: 'gatsby-remark-graph',
+            resolve: 'gatsby-remark-mermaid',
             options: {
-              // this is the language in your code-block that triggers mermaid parsing
-              language: 'mermaid', // default
-              theme: 'default' // could also be dark, forest, or neutral
+              language: 'mermaid',
+              theme: 'default',
+              viewport: {
+                width: 200,
+                height: 200
+              },
+              mermaidOptions: {
+                themeCSS: '.node rect { fill: cornflowerblue; }'
+              }
             }
           },
           {
@@ -75,7 +81,7 @@ module.exports = {
       }
     },
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sharp',
+    'gatsby-plugin-sharp'
     // {
     //   resolve: 'gatsby-plugin-web-font-loader',
     //   options: {

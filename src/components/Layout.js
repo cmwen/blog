@@ -8,7 +8,7 @@ import '../css/layout.css';
 
 export default class Template extends React.Component {
   static propTypes = {
-    children: PropTypes.func
+    children: PropTypes.func,
   };
 
   render() {
@@ -22,7 +22,7 @@ export default class Template extends React.Component {
           title="Min's blog"
           meta={[
             { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'blog, javascript' }
+            { name: 'keywords', content: 'blog, javascript' },
           ]}
         >
           <html lang="en" />
@@ -32,7 +32,7 @@ export default class Template extends React.Component {
             style={{
               margin: `0 auto`,
               maxWidth: 960,
-              padding: isRoot ? `1.45rem 1.0875rem` : `1rem 0.75rem`
+              padding: isRoot ? `1.45rem 1.0875rem` : `1rem 0.75rem`,
             }}
           >
             <h1 style={{ margin: 0, fontSize: isRoot ? `2.5rem` : `2rem` }}>
@@ -54,7 +54,7 @@ export default class Template extends React.Component {
             margin: `0 auto`,
             maxWidth: 960,
             padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0
+            paddingTop: 0,
           }}
         >
           {this.props.children}
