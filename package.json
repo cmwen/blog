@@ -44,6 +44,6 @@
         "start": "npm run develop",
         "format": "prettier --trailing-comma es5 --single-quote --write \"src/**/*.js\"",
         "test": "echo \"Should probably write some tests!\"",
-        "new-blog": "node ./node_modules/plop/src/plop.js"
+        "new-blog": "plop"
     }
 }
